@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCPfoNSMwnMB5gPS2U7mxF_g-FWQskNDbo",
+    //apiKey: ,
     authDomain: "best-tech-nest.firebaseapp.com",
     databaseURL: "https://best-tech-nest.firebaseio.com",
     projectId: "best-tech-nest",
