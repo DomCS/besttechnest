@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
 
   appTitle: string = 'Best Tech Nest';
-
-  constructor() { }
+  showTopics: boolean;
+  constructor() { 
+    this.showTopics = false;
+  }
 
   ngOnInit() {
   }

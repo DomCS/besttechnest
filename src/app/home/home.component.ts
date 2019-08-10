@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from '../data.service';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 export class HomeComponent implements OnInit {
 
   users: Object;
+
+  videoSource: String = 'src\assets\handrail-boardslide.mp4';
 
   constructor(private data: DataService) { }
 
@@ -24,4 +26,9 @@ export class HomeComponent implements OnInit {
     this.data.firstClick();
   }
 
+  @ViewChild('videoPlayer',{static: false}) videoplayer: ElementRef;
+
+  toggleVideo(event: any) {
+    this.videoplayer.nativeElement.play();
+  }
 }

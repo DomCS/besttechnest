@@ -1,7 +1,16 @@
 <h1>HOME</h1>
+
 <ul *ngIf="users">
     <li *ngFor="let user of users.data">
         <img [src]="user.avatar">
         <p>{{user.first_name}} {{user.last_name}}</p>
+       
     </li>
 </ul>
+
+<div class="video">
+    <video controls (click)="toggleVideo()" #videoPlayer>
+        <source src="{{videoSource}}" type="video/mp4" />
+        Browser not supported
+    </video>
+</div>
